@@ -1,0 +1,205 @@
+/* Define custom CSS variables */
+:root {
+    --color-bg: #061a32;
+    --color-default: #fff;
+    --color-fg: #333444;
+    --color-primary: #32cd32;
+    --color-selection-text: #111;
+    --color-text: #2db82d;
+    --font-fira-code: "Fira Code", monospace;
+    --font-fira-mono: "Fira Mono", monospace;
+    --text-shadow: 0px 0px 0.9px #32cd32;
+  }
+  
+  /* Reset default styles for all elements */
+  * {
+    box-sizing: border-box;
+    font-size: 14.8px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style for selected text */
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-selection-text);
+    text-shadow: var(--text-shadow);
+  }
+  
+  /* Style for scrollbar */
+  
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    margin: 2px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-fg);
+  }
+  
+  /* Style for body */
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-default);
+    font-family: var(--font-fira-mono);
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Bold text styles */
+  b {
+    color: var(--color-primary);
+    font-family: var(--font-fira-mono);
+    font-size: 15px;
+    letter-spacing: 0.8px;
+    text-shadow: var(--text-shadow);
+  }
+  
+  /* Style the header element */
+  .header {
+    align-items: center;
+    background-color: var(--color-fg);
+    display: flex;
+    height: 43px;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    user-select: none;
+    width: 100%;
+  }
+  
+  /* Logo styles */
+  #df {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    text-align: center;
+    width: auto;
+  }
+  
+  /* Button container styles */
+  .buttons {
+    display: flex;
+    left: 0;
+    position: absolute;
+  }
+  
+  /* Button styles */
+  .button {
+    border-radius: 50%;
+    height: 14px;
+    margin-left: 12px;
+    width: 14px;
+  }
+  
+  .button:hover {
+    border: 1px solid #56576c;
+    box-shadow: 0px 0px 7px #6c6e91;
+    transform: scale(1.1);
+  }
+  
+  /* Style the buttons with different colors */
+  .red {
+    background-color: #ff5f56;
+  }
+  
+  .yellow {
+    background-color: #ffbd2e;
+  }
+  
+  .green {
+    background-color: #27c93f;
+  }
+  
+  /* Style for terminal screen */
+  .screen {
+    background: var(--color-selection-text);
+    height: 100%;
+    overflow-y: scroll;
+    padding: 10px 10px 60px 10px;
+    position: fixed;
+    scrollbar-color: #444 var(--color-selection-text);
+    scrollbar-width: thin;
+    width: 100%;
+  }
+  
+  /* Command line styles */
+  .command-line {
+    display: flex;
+    margin-bottom: 3px;
+  }
+  
+  /* Prompt styles */
+  .prompt {
+    color: var(--color-text);
+    text-shadow: var(--text-shadow);
+  }
+  
+  /* Style the input text field */
+  input[type="text"] {
+    background-color: var(--color-selection-text);
+    border: none;
+    caret-color: var(--color-primary);
+    color: var(--color-default);
+    font-family: var(--font-fira-code);
+    margin-left: 5px;
+    outline: none;
+    text-transform: lowercase;
+    width: 100%;
+  }
+  
+  /* Style the output element */
+  .output {
+    color: var(--color-text);
+    font-family: var(--font-fira-code);
+    line-height: 24px;
+    overflow: hidden;
+  }
+  
+  /* Style the typing animation */
+  .typing {
+    animation: type 480ms linear;
+    color: var(--color-text);
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+  
+  /* Define keyframes for typing animation */
+  @keyframes type {
+    0% {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 0%;
+    }
+    1% {
+      white-space: nowrap;
+      width: 1%;
+    }
+    50% {
+      white-space: nowrap;
+      width: 50%;
+    }
+    95% {
+      white-space: nowrap;
+      width: 95%;
+    }
+    97% {
+      white-space: initial;
+      width: 97%;
+      word-wrap: break-word;
+    }
+    100% {
+      white-space: initial;
+      width: 100%;
+      word-wrap: break-word;
+    }
+  }
+  
+  /* Style for map */
+  #map {
+    height: 340px;
+    width: 97%;
+    border-radius: 4px;
+    margin: 0.5rem auto;
+  }
